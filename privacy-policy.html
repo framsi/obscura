@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obscura Privacy Policy</title>
+    <style>
+        :root {
+            --bg: #050B1A;
+            --surface: #0A1D3A;
+            --line: #1E2E46;
+            --gold: #D4A029;
+            --ink-050: #F4F1E8;
+            --ink-300: #A9B2C1;
+            --ink-500: #6B7487;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            background: var(--bg);
+            color: var(--ink-300);
+            min-height: 100vh;
+            padding: 48px 24px 96px;
+        }
+        .wrap {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 48px;
+        }
+        .brand-mark {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            background: linear-gradient(180deg, #B8860B 0%, #D4A029 100%);
+            display: grid;
+            place-items: center;
+            color: var(--bg);
+            font-weight: 700;
+            font-family: Georgia, serif;
+            font-size: 18px;
+        }
+        .brand-text {
+            font-family: ui-monospace, SFMono-Regular, "JetBrains Mono", monospace;
+            font-size: 13px;
+            letter-spacing: 3px;
+            color: var(--gold);
+            font-weight: 600;
+        }
+        h1 {
+            color: var(--ink-050);
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 1.2;
+            margin: 0 0 8px;
+            letter-spacing: -0.5px;
+        }
+        .updated {
+            color: var(--ink-500);
+            font-size: 13px;
+            font-family: ui-monospace, SFMono-Regular, monospace;
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: var(--ink-050);
+            font-size: 22px;
+            font-weight: 600;
+            margin: 40px 0 12px;
+            letter-spacing: -0.2px;
+        }
+        p {
+            margin: 0 0 16px;
+        }
+        a {
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(212, 160, 41, 0.4);
+        }
+        a:hover {
+            border-bottom-color: var(--gold);
+        }
+        .lede {
+            font-size: 20px;
+            color: var(--ink-050);
+            line-height: 1.5;
+            border-left: 3px solid var(--gold);
+            padding-left: 20px;
+            margin: 24px 0 40px;
+        }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 24px 0;
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+        ul {
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        code {
+            font-family: ui-monospace, SFMono-Regular, "JetBrains Mono", monospace;
+            font-size: 0.9em;
+            background: rgba(212, 160, 41, 0.1);
+            color: var(--gold);
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        footer {
+            margin-top: 64px;
+            padding-top: 32px;
+            border-top: 1px solid var(--line);
+            color: var(--ink-500);
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+
+        <div class="brand">
+            <div class="brand-mark">O</div>
+            <div class="brand-text">OBSCURA</div>
+        </div>
+
+        <h1>Privacy Policy</h1>
+        <div class="updated">Last updated 23 May 2026</div>
+
+        <p class="lede">
+            Obscura collects nothing about you. Everything you put in
+            Obscura stays on your Mac, encrypted, where only you can
+            read it. There is no cloud, no telemetry, no account.
+        </p>
+
+        <h2>What Obscura is</h2>
+        <p>
+            Obscura is a macOS application that encrypts files locally
+            on your Mac. It is sold once as a standalone product. It
+            has no server backend operated by us.
+        </p>
+
+        <div class="card">
+            <h2>What we collect</h2>
+            <p><strong>Nothing.</strong></p>
+            <p>
+                We do not run analytics, telemetry, or crash reporting
+                that contacts our servers. We have no servers. We do
+                not collect your email beyond what App Store Connect
+                gives us as part of the purchase (Apple handles the
+                purchase; we receive an anonymised sales report from
+                Apple).
+            </p>
+        </div>
+
+        <h2>Where your data lives</h2>
+        <p>
+            All vault content — files, thumbnails, metadata,
+            collections, tags — is encrypted with AES-256-GCM under a
+            key derived from your password and stored locally on your
+            Mac, inside the app's sandboxed container at:
+        </p>
+        <p>
+            <code>~/Library/Containers/com.fabiancooper.obscura/</code>
+        </p>
+        <p>
+            Nothing in that directory is ever sent off your Mac by
+            Obscura.
+        </p>
+
+        <h2>Cloud import</h2>
+        <p>
+            Obscura can import files from cloud providers you connect
+            (iCloud Drive, Dropbox, Google Drive, OneDrive). When you
+            do this:
+        </p>
+        <ul>
+            <li>
+                You authenticate with the provider directly. The
+                provider's OAuth screen runs in your system browser;
+                Obscura never sees your username or password for
+                those services.
+            </li>
+            <li>
+                Files are downloaded over an encrypted connection to
+                the provider's servers, sealed under your Obscura key,
+                and stored in the local vault container. The original
+                copy on the cloud provider is not touched by Obscura.
+            </li>
+            <li>
+                The cloud provider's own privacy policy applies to
+                your data sitting on their servers. Read theirs
+                separately.
+            </li>
+        </ul>
+
+        <h2>Touch ID and Keychain</h2>
+        <p>
+            If you enable Touch ID, your unlock secret is stored in
+            the macOS Keychain, protected by the Secure Enclave on
+            your Mac. The Keychain entry is scoped to Obscura via the
+            <code>keychain-access-groups</code> entitlement
+            (<code>8H992GT3D6.com.fabiancooper.obscura</code>) — no
+            other app on your Mac can read it.
+        </p>
+
+        <h2>Recovery phrase</h2>
+        <p>
+            Obscura optionally generates a 24-word BIP39 recovery
+            phrase. The phrase is shown to you once during setup, then
+            never stored anywhere by the app. If you lose both your
+            password and the phrase, the vault cannot be recovered.
+            That is the design — even we cannot recover it.
+        </p>
+
+        <h2>Children</h2>
+        <p>
+            Obscura is not directed at children under 13 and does not
+            knowingly collect any data from anyone, including children.
+        </p>
+
+        <h2>Changes to this policy</h2>
+        <p>
+            If this policy changes materially, an updated version will
+            appear at the same URL with a new "Last updated" date.
+            Substantive changes (new data collection, new third
+            parties) would also be announced in the app's release
+            notes.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+            Questions or concerns: write to
+            <a href="mailto:obscura-support@fabiancooper.dev">obscura-support@fabiancooper.dev</a>.
+        </p>
+        <p>
+            For App Store-related issues (refunds, billing), contact
+            Apple Support — they handle all purchases.
+        </p>
+
+        <footer>
+            <p>
+                Obscura is developed by Fabian Cooper. This Privacy
+                Policy applies to the Obscura macOS application
+                (bundle ID <code>com.fabiancooper.obscura</code>)
+                distributed via the Mac App Store.
+            </p>
+            <p>
+                &copy; 2026 Fabian Cooper. All rights reserved.
+            </p>
+        </footer>
+
+    </div>
+</body>
+</html>
