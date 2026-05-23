@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obscura Support</title>
+    <style>
+        :root {
+            --bg: #050B1A;
+            --surface: #0A1D3A;
+            --line: #1E2E46;
+            --gold: #D4A029;
+            --ink-050: #F4F1E8;
+            --ink-300: #A9B2C1;
+            --ink-500: #6B7487;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            background: var(--bg);
+            color: var(--ink-300);
+            min-height: 100vh;
+            padding: 48px 24px 96px;
+        }
+        .wrap {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 48px;
+        }
+        .brand-mark {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            background: linear-gradient(180deg, #B8860B 0%, #D4A029 100%);
+            display: grid;
+            place-items: center;
+            color: var(--bg);
+            font-weight: 700;
+            font-family: Georgia, serif;
+            font-size: 18px;
+        }
+        .brand-text {
+            font-family: ui-monospace, SFMono-Regular, "JetBrains Mono", monospace;
+            font-size: 13px;
+            letter-spacing: 3px;
+            color: var(--gold);
+            font-weight: 600;
+        }
+        h1 {
+            color: var(--ink-050);
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 1.2;
+            margin: 0 0 8px;
+            letter-spacing: -0.5px;
+        }
+        h2 {
+            color: var(--ink-050);
+            font-size: 22px;
+            font-weight: 600;
+            margin: 40px 0 12px;
+            letter-spacing: -0.2px;
+        }
+        p {
+            margin: 0 0 16px;
+        }
+        a {
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(212, 160, 41, 0.4);
+        }
+        a:hover {
+            border-bottom-color: var(--gold);
+        }
+        .lede {
+            font-size: 20px;
+            color: var(--ink-050);
+            line-height: 1.5;
+            border-left: 3px solid var(--gold);
+            padding-left: 20px;
+            margin: 24px 0 40px;
+        }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 24px 0;
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+        .contact {
+            display: block;
+            font-family: ui-monospace, SFMono-Regular, monospace;
+            font-size: 18px;
+            color: var(--ink-050);
+            background: rgba(212, 160, 41, 0.08);
+            border: 1px solid rgba(212, 160, 41, 0.25);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 12px 0;
+            text-decoration: none;
+        }
+        .contact:hover {
+            background: rgba(212, 160, 41, 0.15);
+        }
+        ul {
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        footer {
+            margin-top: 64px;
+            padding-top: 32px;
+            border-top: 1px solid var(--line);
+            color: var(--ink-500);
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+
+        <div class="brand">
+            <div class="brand-mark">O</div>
+            <div class="brand-text">OBSCURA</div>
+        </div>
+
+        <h1>Support</h1>
+
+        <p class="lede">
+            Obscura is a small, indie-developed app. Reach me directly
+            and I'll get back to you, usually within 48 hours.
+        </p>
+
+        <a class="contact" href="mailto:framsi@outlook.com">
+            framsi@outlook.com
+        </a>
+
+        <h2>Common questions</h2>
+
+        <div class="card">
+            <h2>I forgot my password.</h2>
+            <p>
+                If you saved your 24-word recovery phrase when you set
+                up Obscura, you can recover your vault: relaunch the
+                app, choose "Restore from Recovery Kit", select your
+                <code>.obscura</code> kit file, enter the 24 words, and
+                set a new password.
+            </p>
+            <p>
+                If you do not have the recovery phrase and you do not
+                remember your password, the vault cannot be opened. We
+                cannot help with this — there is no master key on our
+                side. That is the design.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>How do I back up my vault?</h2>
+            <p>
+                Open Settings &rarr; Security &rarr; Export Recovery
+                Kit. You will receive a <code>.obscura</code> file plus
+                a 24-word phrase. Store the file and the phrase
+                separately — losing both means losing the vault.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Can I move my vault to a different Mac?</h2>
+            <p>
+                Yes. Export a Recovery Kit on the old Mac, install
+                Obscura on the new Mac (App Store version on both), and
+                restore from the kit. Your files, collections, tags,
+                and settings come across.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>The arcade game keeps appearing instead of my vault.</h2>
+            <p>
+                That is correct behaviour. Obscura always opens to the
+                arcade cabinet — that is the privacy feature. To unlock
+                the vault, start any of the three games and enter your
+                password inside the gameplay. If you have never set a
+                password, the app will prompt you to do so the first
+                time you try.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Touch ID isn't working.</h2>
+            <p>
+                Make sure macOS &rarr; System Settings &rarr; Touch ID
+                &amp; Password has at least one fingerprint enrolled.
+                Then in Obscura, go to Settings &rarr; Security and
+                enable "Unlock with Touch ID". You will be asked for
+                your vault password once, then Touch ID handles
+                subsequent unlocks.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>I want a refund.</h2>
+            <p>
+                Apple handles all App Store refunds directly. Open the
+                purchase confirmation email and click "Report a
+                Problem", or visit
+                <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.
+                I have no way to issue refunds from my side.
+            </p>
+        </div>
+
+        <h2>Bug reports and feature requests</h2>
+
+        <p>
+            Email the address above with as much detail as you can
+            include — macOS version, Obscura version (from Settings
+            &rarr; About), and what you were doing when the issue
+            appeared. Screenshots help if the problem is visual.
+        </p>
+
+        <p>
+            Feature requests welcome. I read every email, even if I
+            can't ship every idea.
+        </p>
+
+        <footer>
+            <p>
+                Obscura is developed by Fabian Cooper. See also the
+                <a href="privacy-policy.html">Privacy Policy</a>.
+            </p>
+            <p>
+                &copy; 2026 Fabian Cooper. All rights reserved.
+            </p>
+        </footer>
+
+    </div>
+</body>
+</html>
